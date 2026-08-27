@@ -1,12 +1,44 @@
+# ─── Secrets & Credentials ───────────────────────────────────
+# Real API keys never enter this repo; .env.example is the committed template.
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.secret
+*.token
+credentials.json
+service-account.json
+secrets.json
+
+# ─── SSH & Cloud ─────────────────────────────────────────────
+id_rsa
+id_rsa.pub
+.aws/
+.gcloud/
+.npmrc
+.pypirc
+
+# ─── Databases & Backups ─────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+dump.sql
+*.backup
+*.bak
+
+# ─── Build, Cache & OS ───────────────────────────────────────
 node_modules/
+dist/
+build/
+.cache/
 *.log
 .DS_Store
 
+# ─── Agent Runtime Output ────────────────────────────────────
+# Generated research reports — output, not source.
+artifacts/
+
+# ─── Local Tooling ───────────────────────────────────────────
 # Per-machine tool permissions, not a project setting.
 .claude/settings.local.json
-
-# Real API keys never enter this repo; .env.example is the committed template.
-.env
-
-# Agent output — generated reports, not source.
-artifacts/

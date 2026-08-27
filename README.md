@@ -14,6 +14,29 @@ cp .env.example .env   # then fill in ANTHROPIC_API_KEY and TAVILY_API_KEY
 npm install
 ```
 
+## Secrets
+
+`ANTHROPIC_API_KEY` and `TAVILY_API_KEY` are read from `.env` at runtime
+(`src/config.ts`) and are never hardcoded. `.env` is git-ignored; `.env.example`
+is the committed template holding names only, no values.
+
+Scan for leaked credentials before every push:
+
+```bash
+./scripts/pre-push-check.sh
+```
+
+It checks tracked filenames, greps tracked content for secret-shaped strings,
+and verifies `.env` is ignored — exiting non-zero if anything looks unsafe.
+Wire it in permanently:
+
+```bash
+ln -sf ../../scripts/pre-push-check.sh .git/hooks/pre-push
+```
+
+Generated reports land in `artifacts/`, which is git-ignored — research output
+never gets committed.
+
 ## Run
 
 ```bash
