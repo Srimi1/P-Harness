@@ -1,0 +1,12 @@
+node_modules/
+*.log
+.DS_Store
+
+# Per-machine tool permissions, not a project setting.
+.claude/settings.local.json
+
+# Real API keys never enter this repo; .env.example is the committed template.
+.env
+
+# Agent output — generated reports, not source.
+artifacts/

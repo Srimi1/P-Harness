@@ -1,0 +1,29 @@
+{
+  "name": "research-harness",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CLI research agent: searches five news sites, deep-reads articles, writes a cited markdown digest",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "research": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "smoke:tools": "tsx scripts/smoke-tools.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.70.0",
+    "cheerio": "^1.0.0",
+    "chalk": "^5.4.1",
+    "dotenv": "^16.4.5",
+    "ora": "^8.1.0",
+    "turndown": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/turndown": "^5.0.5",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
