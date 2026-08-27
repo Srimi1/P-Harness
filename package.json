@@ -13,9 +13,9 @@
     "smoke:tools": "tsx scripts/smoke-tools.ts"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.70.0",
-    "cheerio": "^1.0.0",
+    "@anthropic-ai/sdk": "^0.121.0",
     "chalk": "^5.4.1",
+    "cheerio": "^1.0.0",
     "dotenv": "^16.4.5",
     "ora": "^8.1.0",
     "turndown": "^7.2.0"
