@@ -10,7 +10,8 @@
   "scripts": {
     "research": "tsx src/index.ts",
     "typecheck": "tsc --noEmit",
-    "smoke:tools": "tsx scripts/smoke-tools.ts"
+    "smoke:tools": "tsx scripts/smoke-tools.ts",
+    "test:security": "tsx scripts/security-test.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.121.0",
